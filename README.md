@@ -22,9 +22,6 @@ O objetivo deste projeto é explorar a tecnologia de reconhecimento de fala, per
 4. Siga as instruções para interagir com a aplicação por meio de comandos de voz.
 5. Explore o código-fonte para entender como o reconhecimento e a síntese de fala são implementados.
 
-## Contribuições
-
-Contribuições são bem-vindas! Sinta-se à vontade para enviar pull requests com melhorias, correções ou adições ao projeto. Compartilhar novas funcionalidades ou abordagens é encorajado.
 
 Este projeto é uma excelente maneira de aprender e experimentar o reconhecimento de fala, explorando as bibliotecas `pyttsx3` e `SpeechRecognition` em Python.
 
@@ -32,3 +29,10 @@ Este projeto é uma excelente maneira de aprender e experimentar o reconheciment
 
 pyttsx3==2.90 <br>
 SpeechRecognition==3.9.0
+
+---
+
+<p align="center">
+  Feito com ❤️ por Lukas Maia
+</p>
+
