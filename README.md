@@ -25,6 +25,10 @@ O objetivo deste projeto é explorar a tecnologia de reconhecimento de fala, per
 
 Este projeto é uma excelente maneira de aprender e experimentar o reconhecimento de fala, explorando as bibliotecas `pyttsx3` e `SpeechRecognition` em Python.
 
+## Saída da transcrição:
+
+![image](readme/Saida_transcricao.png)
+
 ---
 
 <p align="center">

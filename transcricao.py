@@ -26,5 +26,5 @@ def recognize_speech(audio_path):
 
     return text.strip()
 
-""" audio_path = "Gravando.wav"
-recognize_speech(audio_path) """
+audio_path = "Gravando.wav"
+recognize_speech(audio_path)
