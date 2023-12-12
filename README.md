@@ -17,18 +17,13 @@ O objetivo deste projeto é explorar a tecnologia de reconhecimento de fala, per
 ## Como Usar
 
 1. Clone ou faça o download do repositório para sua máquina local.
-2. Instale as dependências necessárias com `pip install pyttsx3==2.90 SpeechRecognition==3.9.0`.
-3. Execute o script `pybrain.py` em um ambiente Python.
+2. Instale as dependências necessárias com `pip install -r requirements.txt`.
+3. Execute o script `transcricao.py` em um ambiente Python para transcrever um audio de um arquivo ou `save.py` para gravar seu audio e salva-lo.
 4. Siga as instruções para interagir com a aplicação por meio de comandos de voz.
 5. Explore o código-fonte para entender como o reconhecimento e a síntese de fala são implementados.
 
 
 Este projeto é uma excelente maneira de aprender e experimentar o reconhecimento de fala, explorando as bibliotecas `pyttsx3` e `SpeechRecognition` em Python.
-
-## Requirements
-
-pyttsx3==2.90 <br>
-SpeechRecognition==3.9.0
 
 ---
 
