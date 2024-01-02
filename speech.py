@@ -1,4 +1,5 @@
-from transcricao import recognize_speech, sr
+# =========== ARQUIVO TESTE PARAR REDUÇÃO DE RUÍDO ===============
+from transcricao import sr
 import pyttsx3
 
 reproducao = pyttsx3.init()
@@ -20,7 +21,7 @@ def assistente():
             print("Fale agora...")
             audio_data = rec.record(s,duration=5)
 
-            # Save the recorded audio as a WAV file
+            # Salva o novo audio em um arquivo
             audio_file = "Gravando2" + ".wav"
             
             with open(audio_file, "wb") as f:
