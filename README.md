@@ -18,7 +18,7 @@ O objetivo deste projeto é explorar a tecnologia de reconhecimento de fala, per
 
 1. Clone ou faça o download do repositório para sua máquina local.
 2. Instale as dependências necessárias com `pip install -r requirements.txt`.
-3. Execute o script `transcricao.py` em um ambiente Python para transcrever um audio de um arquivo ou `save.py` para gravar seu audio e salva-lo.
+3. Execute o script `transcricao.py` em um ambiente Python para transcrever um audio de um arquivo ou `speech.py` para gravar seu audio e salva-lo.
 4. Siga as instruções para interagir com a aplicação por meio de comandos de voz.
 5. Explore o código-fonte para entender como o reconhecimento e a síntese de fala são implementados.
 
@@ -28,6 +28,10 @@ Este projeto é uma excelente maneira de aprender e experimentar o reconheciment
 ## Saída da transcrição:
 
 ![image](readme/Saida_transcricao.png)
+
+## Futuro:
+
+Para próximas etapas, o planejamento consiste em no arquivo ```speech.py```  realizar etapas de redução de ruído e tratamento de áudio, de modo a aprimorar a facilidade de reconhecimento gerada pelo arquivo principal.
 
 ---
 
