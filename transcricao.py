@@ -1,30 +1,45 @@
 from pydub import AudioSegment
 from pydub.silence import split_on_silence
+import os
+import speech_recognition as sr
 
-sr = __import__("speech_recognition")
+def ogg2wav(ofn):
+    wfn = ofn.replace('.ogg', '.wav')
+    try:
+        x = AudioSegment.from_file(ofn, format="ogg")  # Specify the format parameter
+    except Exception as e:
+        print("deu ruim")
+    x.export(wfn, format='wav')
 
 def recognize_speech(audio_path):
-    # Inicializa o reconhecimento
+    if not os.path.exists(audio_path):
+        print(f"Error: File not found - {audio_path}")
+        return ""
+
     recognizer = sr.Recognizer()
 
-    # carrega o audio
-    audio_file = AudioSegment.from_wav(audio_path)
+    # Load the audio with the correct format parameter
+    try:
+        audio_file = AudioSegment.from_file(audio_path, format="ogg")
+    except Exception as e:
+        print(f"deu ruim {e}")
 
-    # Divide pelo silencio
-    chunks = split_on_silence(audio_file, silence_thresh=-40) 
+    # Split on silence
+    chunks = split_on_silence(audio_file, silence_thresh=-40)
 
-    # Reconhece para cada "chunck"
     text = ""
-    for chunk in chunks:
-        with sr.AudioFile(chunk.export(format="wav")) as source:
+    for i, chunk in enumerate(chunks):
+        # Export each chunk to WAV
+        chunk.export(f"chunk_{i}.wav", format="wav")
+
+        with sr.AudioFile(f"chunk_{i}.wav") as source:
             audio_data = recognizer.record(source)
             try:
                 chunk_text = recognizer.recognize_google(audio_data, language="pt-BR")
                 text += chunk_text + " "
-            except Exception as e:
-                print(f"Não foi possível identificar: {e}")
+            except sr.UnknownValueError:
+                print("Speech Recognition could not understand audio")
+            except sr.RequestError as e:
+                print(f"Could not request results from Google Speech Recognition service; {e}")
 
     return text.strip()
-
-audio_path = "Gravando.wav"
-recognize_speech(audio_path)
